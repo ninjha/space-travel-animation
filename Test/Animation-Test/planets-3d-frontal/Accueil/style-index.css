@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    min-height: 100vh;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.solar-system {
+    position: fixed; /* Change to fixed to maintenir la position */
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.celestial-body {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+#front {
+    background-color: #0fff7b;
+    position: fixed;
+    left: 50%;
+    bottom: -100px; /* Moitié du cercle hors écran */
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+#back {
+    background-color: #4ECDC4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) translateZ(-2000px);
+}
+
+/* Cacher les autres planètes */
+.celestial-body:not(#front):not(#back) {
+    display: none;
+}

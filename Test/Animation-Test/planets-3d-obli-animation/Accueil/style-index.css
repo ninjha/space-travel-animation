@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Viewport principal */
+.solar-system {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(227, 222, 222);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Conteneur de la caméra */
+.camera {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+    pointer-events: none;
+}
+
+/* Groupe de transformation pour toutes les planètes */
+#planets-group {
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+    height: 110%;
+    transform-style: preserve-3d;
+    /* Point d'ancrage au centre bas, comme Mercure */
+    transform-origin: center 80%;
+    transform: translateZ(700px);/* Gère l'avancement des planètes */
+    pointer-events: none;
+}
+
+/* Style commun pour les planètes */
+.celestial-body {
+    position: absolute;
+    width: 30vh;  /* Taille relative à la hauteur de l'écran */
+    height: 30vh;
+    border-radius: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    pointer-events: all;
+}
+
+/* Mercure - notre point de référence */
+#mercure {
+    background: #926464;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(0px);;
+}
+
+/* Autres planètes positionnées par rapport à Mercure */
+#venus {
+    background: #e6b800;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-4000px);
+    pointer-events: all;
+}
+
+#terre {
+    background: #4da6ff;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-8000px);
+}
+
+#mars {
+    background: #ff4d4d;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-12000px);
+}
+
+#jupiter {
+    background: #e67300;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-16000px);
+}
+
+#saturne {
+    background: #d4b377;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-20000px);
+}
+
+#uranus {
+    background: #99ffff;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-24000px);
+}
+
+#neptune {
+    background: #0066ff;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-28000px);
+}
+
+#pluton {
+    background: #5f6a7a;
+    bottom: 20%;
+    transform: translate(-50%, 0) translateZ(-32000px);
+}
