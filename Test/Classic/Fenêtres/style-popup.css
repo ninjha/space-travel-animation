@@ -1,0 +1,40 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+body{
+    background: linear-gradient(0.25turn, #cacaca, #ededed , #4e4e4e );
+
+}
+/* Boutons*/
+.top-menu {
+    justify-content: center ;
+    display: flex;
+    position: fixed;
+    gap: 1rem;
+    top:0%;
+    width: 100%; /* Prend toute la largeur de la page */
+    z-index: 1000; /* S'assure que le menu est au-dessus des autres éléments */
+}
+.popUpButton{
+    width:10rem ;
+    height:2rem ;
+    background: hsla(0, 0%, 0%, 0.509);
+    border-radius: 0px 0px 5px 5px;
+    color:white;
+    backdrop-filter: blur(10px);
+    text-shadow: 0 0 1px #ffffff;
+    border: 1px solid hsla(0, 0%, 0%, 0.039);
+}
+
+.popUpButton:hover{
+    background: hsla(0, 0%, 100%, 0.719);
+    color:rgb(0, 0, 0);
+    border: 1px solid hsla(0, 0%, 100%, 0.039);
+    box-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff;
+    transition: background 0.5s, color 0.5s, text-shadow 0.5s;
+    
+}
+
+

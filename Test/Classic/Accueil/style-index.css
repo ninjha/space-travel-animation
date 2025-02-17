@@ -1,0 +1,231 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+body{
+    background: linear-gradient(0.25turn, #cacaca, #ededed , #4e4e4e );
+
+}
+/* Boutons*/
+.top-menu {
+    justify-content: center ;
+    display: flex;
+    position: fixed;
+    gap: 1rem;
+    top:0%;
+    width: 100%; /* Prend toute la largeur de la page */
+    z-index: 1000; /* S'assure que le menu est au-dessus des autres éléments */
+}
+.popUpButton{
+    width:10rem ;
+    height:2rem ;
+    background: hsla(0, 0%, 0%, 0.509);
+    border-radius: 0px 0px 5px 5px;
+    color:white;
+    backdrop-filter: blur(10px);
+    text-shadow: 0 0 1px #ffffff;
+    border: 1px solid hsla(0, 0%, 0%, 0.039);
+}
+
+.popUpButton:hover{
+    background: hsla(0, 0%, 100%, 0.719);
+    color:rgb(0, 0, 0);
+    border: 1px solid hsla(0, 0%, 100%, 0.039);
+    box-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff;
+    transition: background 0.5s, color 0.5s, text-shadow 0.5s;
+    
+}
+
+/*BackGround*/
+.solar-system {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 400px; /* Ajusté pour le nouveau soleil */
+    overflow-x: auto;
+    
+    
+}
+
+.celestial-body {
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    margin-right: 4rem; /* Augmenté l'espacement */
+    flex-shrink: 0;
+
+    
+}
+.celestial-body:hover {
+    box-shadow: 0 0 2rem #ffffff, inset 0 0 1.3rem rgb(255, 255, 255);
+    transition: background 0.3s ease-in-out; 
+}
+
+#sun {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width:1000px; /* Doublé */
+    height: 1000px;
+    margin-left: -800px;
+}
+
+#mercure {
+    background-color: rgba(0, 0, 0, 0.265);
+    width: 40px;
+    height: 40px;
+}
+
+#venus {
+    background-color: rgba(0, 0, 0, 0.265);
+    width: 76px;
+    height: 76px;
+}
+
+#terre {
+    width: 80px;
+    height: 80px;
+}
+
+#terre:hover{
+    background: linear-gradient(
+        to bottom, 
+        #ffffff 10%,
+        #0c8622 20%,
+        #0561ec 47%,
+        #0c8622 60%,
+        #0561ec 77%,
+        #ffffff 100%
+    ),
+    radial-gradient(ellipse at left top,
+        rgba(255, 255, 255, 0.5) 30%, /* Lumière douce */
+        rgba(0, 0, 0, 0.8) 90% /* Ombre */
+    );
+    background-blend-mode: overlay; /* Mélange les gradients */
+    transform: rotate(340deg);
+}
+
+#mars {
+    width: 60px;
+    height: 60px;
+    background-color: whit;
+    
+}
+
+#mars:hover {
+    background: linear-gradient(
+        to bottom,
+        #d14b2e 10%, /* Rouge orangé */
+        #e97b4a 30%, /* Tons plus clairs */
+        #b63525 50%, /* Rouge profond */
+        #d14b2e 70%, /* Rouge orangé */
+        #e97b4a 90% /* Tons clairs */
+    ),
+    radial-gradient(ellipse at left top,
+        rgba(255, 255, 255, 0.5) 30%, /* Lumière douce */
+        rgba(0, 0, 0, 0.8) 90% /* Ombre */
+    );
+    background-blend-mode: overlay; /* Mélange les gradients */
+}
+
+
+#asteroide {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width:1680px; /* Doublé */
+    height: 2000px;
+    margin-left: -800px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px dotted rgba(0, 0, 0, 0.363); /* Bordure en pointillés noirs */
+    z-index: -1;/*Attention : RISQUE de conflit avec les hoover, cet élément est un cercle recouvrant une bonne partie de la page*/
+}
+
+#jupiter {
+    width: 224px;
+    height: 224px;   
+}
+
+#jupiter:hover {
+    background: 
+        linear-gradient(
+            to bottom, 
+            #d69a57 10%, 
+            #f5d1a3 20%, 
+            #c97843 30%, 
+            #f5d1a3 40%, 
+            #d69a57 50%, 
+            #c97843 60%, 
+            #f5d1a3 70%, 
+            #d69a57 80%
+        ),
+        radial-gradient(ellipse at left top,
+            rgba(255, 255, 255, 0.5) 30%, /* Lumière douce */
+            rgba(0, 0, 0, 0.8) 90% /* Ombre */
+        );
+    background-blend-mode: overlay; /* Mélange les gradients */
+}
+
+
+
+#saturn {
+    width: 150px;
+    height: 150px;
+}
+/*Anneaux*/
+#saturn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Taille des anneaux */
+    height: 200px;
+    border-radius: 50%; /* Cercle parfait */
+    background: rgba(0, 0, 0, 0.1); /* Couleur semi-transparente pour les anneaux */
+    border: 2px dotted rgba(0, 0, 0, 0.3); /* Optionnel : bordure en pointillés */
+}
+
+#saturn:hover{
+    background:
+     linear-gradient(
+        to bottom,
+        #e5c78a 10%, /* Jaune pâle */
+        #f6e3b4 30%, /* Tons clairs */
+        #d9b773 50%, /* Jaune profond */
+        #f6e3b4 70%, /* Tons clairs */
+        #e5c78a 90% /* Jaune pâle */
+    ),
+    radial-gradient(ellipse at left top,
+        rgba(255, 255, 255, 0.5) 30%, /* Lumière douce */
+        rgba(0, 0, 0, 0.8) 90% /* Ombre */
+    );
+    background-blend-mode: overlay; /* Mélange les gradients */
+}
+
+#uranus {
+    background-color: rgba(0, 0, 0, 0.265);
+    width: 80px;
+    height: 80px;
+}
+
+#neptune {
+    background-color: rgba(0, 0, 0, 0.265);
+    width: 76px;
+    height: 76px;
+}
+
+#pluton {
+    background-color: rgba(0, 0, 0, 0.265);
+    width: 20px;
+    height: 20px;
+}
